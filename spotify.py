@@ -7,15 +7,12 @@ load_dotenv()
 
 class Spotify:
     
-    @staticmethod
-    def test_route():
-        return "Hello World"
-    
     def __init__(self):
         self.song_names = []
         self.artist_names = []
         
     def get_access_token(self, client_id, client_secret, playlist_id):
+        
         # Get access token from Spotify account using client ID and Secret
         auth_response = requests.post("https://accounts.spotify.com/api/token", {
             "grant_type": "client_credentials",
@@ -41,5 +38,5 @@ class Spotify:
             self.artist_names.append(track["track"]["album"]["artists"][0]["name"])
 
         self.my_songs = {self.song_names[i]: self.artist_names[i] for i in range(len(self.song_names))}
-        
+        print(self.song_names)
         return self.my_songs
