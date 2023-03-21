@@ -1,9 +1,4 @@
 import requests
-import os
-from dotenv import load_dotenv
-
-# Load the variables from the .env file
-load_dotenv()
 
 class Spotify:
     

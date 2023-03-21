@@ -1,6 +1,6 @@
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-import itertools
+import itertools # Will delete later when done with testing
 
 class YoutubeId:
     
@@ -13,7 +13,7 @@ class YoutubeId:
             YOUTUBE_API_VERSION = "v3"
             youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=developer_key)
 
-            for song in itertools.islice(song_names, 2):
+            for song in itertools.islice(song_names, 2): # Delete when done
             # for song in song_names:
                 search_response = youtube.search().list(
                     q=song,

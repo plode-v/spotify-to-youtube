@@ -2,12 +2,11 @@ from spotify import Spotify
 from youtube_id import YoutubeId
 from dotenv import load_dotenv
 import os
-import re
 
 # Load_dotenv function is execute for local environment variables
 load_dotenv()
 
-class App:
+class App():
     def __init__(self):
         self.spotify = Spotify()
         self.youtube_id = YoutubeId()
