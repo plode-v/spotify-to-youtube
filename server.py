@@ -39,3 +39,6 @@ for track in all_tracks_info:
     song_names.append(track["track"]["name"])
     artist_names.append(track["track"]["album"]["artists"][0]["name"])
 
+my_songs = {song_names[i]: artist_names[i] for i in range(len(song_names))}
+
+print(my_songs)
